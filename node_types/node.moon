@@ -1,6 +1,4 @@
-local _PACKAGE
-_PACKAGE  = (...)\match("^(.+)[%./][^%./]+")\gsub("[%./]?node_types", "")
-Registry = require _PACKAGE.."registry"
+Registry = require "registry"
 
 class Node
 	new: (config={}) =>
@@ -30,3 +28,5 @@ class Node
 	fail: =>
 		if @control
 			@control\fail!
+
+return Node

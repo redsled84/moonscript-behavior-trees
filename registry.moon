@@ -4,6 +4,6 @@ class Registry
 		@registeredNodes[name] = node
 	getNode: (name) =>
 		if type name == "string"
-			return registeredNodes[name]
+			return @registeredNodes[name]
 		else
 			return name

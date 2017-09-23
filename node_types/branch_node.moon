@@ -1,7 +1,5 @@
-local _PACKAGE
-_PACKAGE  = (...)\match("^(.+)[%./][^%./]+")\gsub("[%./]?node_types", "")
-Registry = require _PACKAGE.."/registry"
-Node = require _PACKAGE.."/node_types/node"
+Registry = require "registry"
+Node = require "node_types/node"
 
 class BranchNode extends Node
 	start: (object) =>
@@ -28,3 +26,5 @@ class BranchNode extends Node
 		@nodeRunning = false
 		@node\finish @object
 		@node = nil
+
+return BranchNode

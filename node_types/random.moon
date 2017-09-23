@@ -1,6 +1,4 @@
-local _PACKAGE
-_PACKAGE  = (...)\match("^(.+)[%./][^%./]+")\gsub("[%./]?node_types", "")
-BranchNode = require _PACKAGE.."/node_types/branch_node"
+BranchNode = require "node_types/branch_node"
 
 class Random extends BranchNode
 	start: (object) =>
@@ -12,3 +10,5 @@ class Random extends BranchNode
 	fail: =>
 		super!
 		@control\fail!
+
+return Random

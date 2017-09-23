@@ -1,6 +1,4 @@
-local _PACKAGE
-_PACKAGE  = (...)\match("^(.+)[%./][^%./]+")\gsub("[%./]?node_types", "")
-BranchNode = require _PACKAGE.."/node_types/branch_node"
+BranchNode = require "node_types/branch_node"
 
 class Sequence extends BranchNode
 	success: =>
@@ -13,3 +11,5 @@ class Sequence extends BranchNode
 	fail: =>
 		@fail!
 		@control\fail!
+
+return Sequence
