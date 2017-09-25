@@ -28,5 +28,7 @@ class Node
 	fail: =>
 		if @control
 			@control\fail!
+	__tostring: =>
+		return "instance of class Node"
 
 return Node

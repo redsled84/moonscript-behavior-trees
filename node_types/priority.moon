@@ -11,5 +11,7 @@ class Priority extends BranchNode
       @_run @object
     else
       @control\fail!
+  __tostring: =>
+    return "instance of class Priority"
 
 return Priority

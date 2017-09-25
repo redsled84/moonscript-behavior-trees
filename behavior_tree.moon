@@ -1,5 +1,6 @@
 Registry = require "registry"
 Node = require "node_types/node"
+inspect = require "inspect"
 
 class BehaviorTree extends Node
   Node: Node
@@ -25,6 +26,8 @@ class BehaviorTree extends Node
       @started = true
       @object = object or @object
       @rootNode = Registry\getNode @tree
+      print inspect rootNode
+      print @rootNode
       @rootNode\setControl self
       @rootNode\start @object
       @rootNode\call_run @object

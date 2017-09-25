@@ -26,5 +26,7 @@ class BranchNode extends Node
 		@nodeRunning = false
 		@node\finish @object
 		@node = nil
+	__tostring: =>
+		return "instance of class BranchNode"
 
 return BranchNode

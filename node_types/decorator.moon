@@ -14,5 +14,7 @@ class Decorator extends Node
   run: (object) =>
     @node\setControl self
     @node\call_run object
+  __tostring: =>
+    return "instance of class Decorator"
 
 return Decorator

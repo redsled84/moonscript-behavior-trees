@@ -5,5 +5,7 @@ class AlwaysFailDecorator extends Decorator
     @control\fail!
   fail: =>
     @control\fail!
+ 	__tostring: =>
+		return "instance of class AlwaysFailDecorator"
 
 return AlwaysFailDecorator

@@ -11,5 +11,7 @@ class Sequence extends BranchNode
 	fail: =>
 		@fail!
 		@control\fail!
+	__tostring: =>
+		return "instance of class Sequence"
 
 return Sequence

@@ -20,5 +20,7 @@ class ActivePriority extends Priority
       local runningNode
       runningNode = Registry\getNode @nodes[@runningTask]
       runningNode\finish!
+  __tostring: =>
+    return "instance of class ActivePriority"
 
 return ActivePriority

@@ -10,5 +10,7 @@ class Random extends BranchNode
 	fail: =>
 		super!
 		@control\fail!
+	__tostring: =>
+		return "instance of class Random"
 
 return Random
